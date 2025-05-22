@@ -1,0 +1,45 @@
+/* Tooltip container */
+a:hover {
+    cursor: pointer;
+}
+
+.shige_day_farm .custom_shige_tooltiptext {
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100%;
+    background: #49beb7;
+    color: white;
+    /* font-size: 12px; */
+    padding: 10px;
+    line-height: 1.4;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    transition: all 0.4s ease;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+    text-align: center;
+}
+
+.shige_day_farm .custom_shige_tooltiptext::after {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    bottom: -5px;
+    transform: rotateZ(45deg) translateX(-50%);
+    transform-origin: left;
+    content: ' ';
+    background: #49beb7;
+}
+
+.shige_day_farm:hover .custom_shige_tooltiptext {
+    visibility: visible;
+    opacity: 1.0;
+    bottom: calc(100% + 10px);
+}
+
